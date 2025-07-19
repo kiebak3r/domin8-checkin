@@ -6,7 +6,7 @@ from constants import *
 
 # Initialise the database
 def init_db():
-    conn = sqlite3.connect("Assets/domin8.db")
+    conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
 
     # Create Users Table
@@ -58,7 +58,7 @@ def get_week_start():
 # Verify the Users Login Attempt
 def verify_user(user_id):
     # Connect to database
-    conn = sqlite3.connect("Assets/domin8.db")
+    conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
 
     # Check Users Subscription
